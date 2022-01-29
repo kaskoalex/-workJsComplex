@@ -1,3 +1,6 @@
+"use strict";
+
+
 let num = 266219;
 num = String(num);
 
