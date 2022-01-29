@@ -1,19 +1,19 @@
 let num = 266219;
 num = String(num);
 
-a = 1
-i = 0
+let a = 1
+let i = 0
 while (i < num.length) {
 
   a = a * num[i];
   i += 1;
 }
 
-console.log(a);
+console.log('Произведение  цифр  числа 266219',a);
 
 
-b = a **3
-console.log(b);
+let b = a **3
+console.log('Результат возведения в степень 3 = '+b);
 
 num = String(b)
-console.log(num.slice(0,2));
+console.log('Первые 2 цифры полученного числа - '+ num.slice(0,2));
