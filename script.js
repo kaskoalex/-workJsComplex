@@ -13,10 +13,11 @@ while (i < num.length) {
 }
 
 console.log('Произведение  цифр  числа 266219',a);
-
+console.log('\n')
 
 let b = a **3
 console.log('Результат возведения в степень 3 = '+b);
+console.log('\n')
 
 num = String(b)
 console.log('Первые 2 цифры полученного числа - '+ num.slice(0,2));
