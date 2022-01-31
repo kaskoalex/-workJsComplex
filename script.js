@@ -1,23 +1,55 @@
 "use strict";
 
+//1). Переменная lang может принимать 2 значения: 'ru' 'en'.
 
-let num = 266219;
-num = String(num);
 
-let a = 1
-let i = 0
-while (i < num.length) {
 
-  a = a * num[i];
-  i += 1;
+
+let dayArr = [
+  ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+
+  ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+];
+
+let lang = "en";
+// a) через if  -----------------------------
+
+if (lang == "ru") {
+  console.log(dayArr[0].toString());
+
+} else if (lang == "en") {
+  console.log(dayArr[1].join());
+
+} else {
+  console.log("Something went wrong");
 }
 
-console.log('Произведение  цифр  числа 266219',a);
-console.log('\n')
+//b) через switch-case -----------------------
 
-let b = a **3
-console.log('Результат возведения в степень 3 = '+b);
-console.log('\n')
+switch (true) {
+  case lang == "ru":
+    console.log(dayArr[0].toString());
+    break
 
-num = String(b)
-console.log('Первые 2 цифры полученного числа - '+ num.slice(0,2));
+  case lang == "en" :
+    console.log(dayArr[1].join());
+    break
+
+  default:
+    console.log("Something went wrong");
+}
+
+//c) через многомерный массив без ифов и switch.
+
+let langArr = lang == "ru" ? console.log(dayArr[0].join()) : console.log(dayArr[1].join());
+
+
+//2). У нас есть переменная namePerson. Если значение этой переменной “Артем” то вывести в консоль “директор”, если значение “Александр” то вывести в консоль “преподаватель”, с любым другим значением вывести в консоль “студент”
+
+ //Решить задачу с помощью нескольких тернарных операторов, без использования if или switch
+
+let namePerson ="Александр"
+
+let inputName1 = namePerson == "Артем" ? console.log("Директор.") : namePerson == "Александр" ? console.log("Преподаватель.") : console.log("Студент.");
+
+
