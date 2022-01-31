@@ -24,6 +24,9 @@ if (lang == "ru") {
   console.log("Something went wrong");
 }
 
+
+
+
 //b) через switch-case -----------------------
 
 switch (true) {
@@ -42,6 +45,15 @@ switch (true) {
 //c) через многомерный массив без ифов и switch.
 
 let langArr = lang == "ru" ? console.log(dayArr[0].join()) : console.log(dayArr[1].join());
+
+// или
+
+let en = dayArr[1];
+let ru = dayArr[0];
+
+let lang1 = en;
+
+console.log(lang1.toString());
 
 //  Или другой вариант:
 
