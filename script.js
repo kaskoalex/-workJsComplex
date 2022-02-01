@@ -5,23 +5,22 @@
 
 
 
+let dayArr = [
+  ['ru','en'],
 
-let ru=['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+  ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
 
-let en=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+];
 
-let dayArr = [ru,en];
-
-
-
-let lang = en;
+let lang = "en";
 // a) через if  -----------------------------
 
-if (lang == ru) {
-  console.log(dayArr[0].toString());
-
-} else if (lang == en) {
+if (lang == "ru") {
   console.log(dayArr[1].toString());
+
+} else if (lang == "en") {
+  console.log(dayArr[2].join());
 
 } else {
   console.log("Something went wrong");
@@ -33,12 +32,12 @@ if (lang == ru) {
 //b) через switch-case -----------------------
 
 switch (true) {
-  case lang == ru:
-    console.log(dayArr[0].toString());
+  case lang == "ru":
+    console.log(dayArr[1].toString());
     break
 
-  case lang == en:
-    console.log(dayArr[1].join());
+  case lang == "en":
+    console.log(dayArr[2].join());
     break
 
   default:
@@ -47,10 +46,8 @@ switch (true) {
 
 //c) через многомерный массив без ифов и switch.
 
-
-
-console.log(lang.toString());
-
+let language = dayArr[0].indexOf(lang);
+console.log(dayArr[language + 1].join())
 
 
 //2). У нас есть переменная namePerson. Если значение этой переменной “Артем” то вывести в консоль “директор”, если значение “Александр” то вывести в консоль “преподаватель”, с любым другим значением вывести в консоль “студент”
