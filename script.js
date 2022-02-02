@@ -3,14 +3,14 @@
 
 
 const stringValidation = function (str) {
-  if (typeof str !== typeof str.toString()) {
+  if (typeof str !== 'string') {
     alert("Заданный тип данных не является строкой");
   } else {
-    str = str.trim();
-    if (str.length <31){
-      return str
+    strNew = str.trim();
+    if (strNew.length <31){
+      return strNew
     } else {
-      return str=str.slice(0,30)+"..."
+      return strNew.slice(0,30)+"..."
     }
   }
 
