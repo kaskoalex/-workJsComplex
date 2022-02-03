@@ -6,7 +6,7 @@ const stringValidation = function (str) {
   if (typeof str !== 'string') {
     alert("Заданный тип данных не является строкой");
   } else {
-    strNew = str.trim();
+    let strNew = str.trim();
     if (strNew.length <31){
       return strNew
     } else {
